@@ -1,0 +1,1142 @@
+{
+	"info": {
+		"_postman_id": "f4e3d738-795b-4df7-8877-9bba4095bc95",
+		"name": "Custom Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40682964"
+	},
+	"item": [
+		{
+			"name": "Статистика просмотра телеканала пользователем",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{metricsServer}}/channel/{{channelId}}/stats/viewing?dateFrom={{dateFrom}}&dateTo={{dateTo}}&userId={{userId}}",
+					"host": [
+						"{{metricsServer}}"
+					],
+					"path": [
+						"channel",
+						"{{channelId}}",
+						"stats",
+						"viewing"
+					],
+					"query": [
+						{
+							"key": "dateFrom",
+							"value": "{{dateFrom}}",
+							"description": "Обязательный параметр\nДата начала периода (string)"
+						},
+						{
+							"key": "dateTo",
+							"value": "{{dateTo}}",
+							"description": "Обязательный параметр\nДата окончания периода (string)"
+						},
+						{
+							"key": "userId",
+							"value": "{{userId}}",
+							"description": "Обязательный параметр\nИдентификатор пользователя (string)"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Статистика просмотра телеканала пользователем",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"name": "Content-Type",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{metricsServer}}/channel/{{channelId}}/stats/viewing?dateFrom={{dateFrom}}&dateTo={{dateTo}}&userId={{userId}}",
+							"host": [
+								"{{metricsServer}}"
+							],
+							"path": [
+								"channel",
+								"{{channelId}}",
+								"stats",
+								"viewing"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "{{dateFrom}}"
+								},
+								{
+									"key": "dateTo",
+									"value": "{{dateTo}}"
+								},
+								{
+									"key": "userId",
+									"value": "{{userId}}"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"userId\":\"{{userId}}\",\n    \"dateFrom\":\"{{dateFrom}}\",\n    \"dateTo\":\"{{dateTo}}\",\n    \"channelId\":{{channelId}},\n    \"channelTitle\":\"Пейзаж ТВ\",\n    \"userDetails\":{\n        \"userCategory\": \"premium\",\n        \"accountId\": 100\n    },\n    \"viewingDetails\":{\n        \"viewingTime\":{\n            \"value\": 98,\n            \"unit\": \"минут\"\n        },\n        \"viewingCount\":{\n            \"value\": 4,\n            \"unit\": \"шт.\"\n        }\n    }\n}"
+				},
+				{
+					"name": "Статистика просмотра телеканала пользователем (error1)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{metricsServer}}/channel/{{channelId}}/stats/viewing?dateFrom=&dateTo=&userId=",
+							"host": [
+								"{{metricsServer}}"
+							],
+							"path": [
+								"channel",
+								"{{channelId}}",
+								"stats",
+								"viewing"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": ""
+								},
+								{
+									"key": "dateTo",
+									"value": ""
+								},
+								{
+									"key": "userId",
+									"value": ""
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"name\": \"Error Params\",\n        \"message\": \"Double check your request params and try again.\",\n        \"header\": \"No matching params\"\n    }\n}"
+				},
+				{
+					"name": "Статистика просмотра телеканала пользователем (error2)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{metricsServer}}/channel/{{channelId}}/stats/viewing?dateFrom",
+							"host": [
+								"{{metricsServer}}"
+							],
+							"path": [
+								"channel",
+								"{{channelId}}",
+								"stats",
+								"viewing"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": null
+								},
+								{
+									"key": "dateTo",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "userId",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"name\": \"Error Params\",\n        \"message\": \"Double check your request params and try again.\",\n        \"header\": \"No matching params\"\n    }\n}"
+				},
+				{
+					"name": "Статистика просмотра телеканала пользователем (error3)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{metricsServer}}/channel/{{channelId}}/stats/viewing?dateTo=",
+							"host": [
+								"{{metricsServer}}"
+							],
+							"path": [
+								"channel",
+								"{{channelId}}",
+								"stats",
+								"viewing"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "dateTo",
+									"value": ""
+								},
+								{
+									"key": "userId",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"name\": \"Error Params\",\n        \"message\": \"Double check your request params and try again.\",\n        \"header\": \"No matching params\"\n    }\n}"
+				},
+				{
+					"name": "Статистика просмотра телеканала пользователем (error4)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{metricsServer}}/channel/{{channelId}}/stats/viewing?userId",
+							"host": [
+								"{{metricsServer}}"
+							],
+							"path": [
+								"channel",
+								"{{channelId}}",
+								"stats",
+								"viewing"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "dateTo",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "userId",
+									"value": null
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"name\": \"Error Params\",\n        \"message\": \"Double check your request params and try again.\",\n        \"header\": \"No matching params\"\n    }\n}"
+				},
+				{
+					"name": "Статистика просмотра телеканала пользователем (error5)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{metricsServer}}/channel/{{channelId}}/stats/viewing?dateFrom&userId",
+							"host": [
+								"{{metricsServer}}"
+							],
+							"path": [
+								"channel",
+								"{{channelId}}",
+								"stats",
+								"viewing"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": null
+								},
+								{
+									"key": "dateTo",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "userId",
+									"value": null
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"name\": \"Error Params\",\n        \"message\": \"Double check your request params and try again.\",\n        \"header\": \"No matching params\"\n    }\n}"
+				},
+				{
+					"name": "Статистика просмотра телеканала пользователем (error6)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{metricsServer}}/channel/{{channelId}}/stats/viewing?dateTo=&userId",
+							"host": [
+								"{{metricsServer}}"
+							],
+							"path": [
+								"channel",
+								"{{channelId}}",
+								"stats",
+								"viewing"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "dateTo",
+									"value": ""
+								},
+								{
+									"key": "userId",
+									"value": null
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"name\": \"Error Params\",\n        \"message\": \"Double check your request params and try again.\",\n        \"header\": \"No matching params\"\n    }\n}"
+				},
+				{
+					"name": "Статистика просмотра телеканала пользователем (error7)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{metricsServer}}/channel/{{channelId}}/stats/viewing?dateFrom&dateTo=",
+							"host": [
+								"{{metricsServer}}"
+							],
+							"path": [
+								"channel",
+								"{{channelId}}",
+								"stats",
+								"viewing"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": null
+								},
+								{
+									"key": "dateTo",
+									"value": ""
+								},
+								{
+									"key": "userId",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"name\": \"Error Params\",\n        \"message\": \"Double check your request params and try again.\",\n        \"header\": \"No matching params\"\n    }\n}"
+				},
+				{
+					"name": "Статистика просмотра телеканала пользователем",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"name": "Content-Type",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{metricsServer}}/channel/{{channelId}}/stats/viewing?dateFrom={{dateFrom}}&dateTo={{dateTo}}&userId=",
+							"host": [
+								"{{metricsServer}}"
+							],
+							"path": [
+								"channel",
+								"{{channelId}}",
+								"stats",
+								"viewing"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "{{dateFrom}}",
+									"description": "Обязательный параметр\nДата начала периода (string)"
+								},
+								{
+									"key": "dateTo",
+									"value": "{{dateTo}}",
+									"description": "Обязательный параметр\nДата окончания периода (string)"
+								},
+								{
+									"key": "userId",
+									"value": "",
+									"description": "Обязательный параметр\nИдентификатор пользователя (string)"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"name\": \"User Not Found\",\n        \"message\": \"Double check your request params and try again.\",\n        \"header\": \"No matching user\"\n    }\n}"
+				},
+				{
+					"name": "Статистика просмотра телеканала пользователем",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"name": "Content-Type",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{metricsServer}}/channel/{{channelId}}/stats/viewing?dateFrom={{dateFrom}}&dateTo={{dateTo}}&userId=",
+							"host": [
+								"{{metricsServer}}"
+							],
+							"path": [
+								"channel",
+								"{{channelId}}",
+								"stats",
+								"viewing"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "{{dateFrom}}",
+									"description": "Обязательный параметр\nДата начала периода (string)"
+								},
+								{
+									"key": "dateTo",
+									"value": "{{dateTo}}",
+									"description": "Обязательный параметр\nДата окончания периода (string)"
+								},
+								{
+									"key": "userId",
+									"value": "",
+									"description": "Обязательный параметр\nИдентификатор пользователя (string)"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"name\": \"User Not Found_2\",\n        \"message\": \"Double check your request params and try again.\",\n        \"header\": \"No matching user\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Оценки пользователей",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{metricsServer}}/channel/{{channelId}}/stats/rating?dateFrom={{dateFrom}}&dateTo={{dateTo}}",
+					"host": [
+						"{{metricsServer}}"
+					],
+					"path": [
+						"channel",
+						"{{channelId}}",
+						"stats",
+						"rating"
+					],
+					"query": [
+						{
+							"key": "dateFrom",
+							"value": "{{dateFrom}}",
+							"description": "Обязательный параметр\nДата начала периода (string)"
+						},
+						{
+							"key": "dateTo",
+							"value": "{{dateTo}}",
+							"description": "Обязательный параметр\nДата окончания периода (string)"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Оценки пользователей",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"name": "Content-Type",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{metricsServer}}/channel/{{channelId}}/stats/rating?dateFrom={{dateFrom}}&dateTo={{dateTo}}",
+							"host": [
+								"{{metricsServer}}"
+							],
+							"path": [
+								"channel",
+								"{{channelId}}",
+								"stats",
+								"rating"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "{{dateFrom}}",
+									"description": "Обязательный параметр\nДата начала периода (string)"
+								},
+								{
+									"key": "dateTo",
+									"value": "{{dateTo}}",
+									"description": "Обязательный параметр\nДата окончания периода (string)"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"dateFrom\": \"{{dateFrom}}\",\n    \"dateTo\": \"{{dateTo}}\",\n    \"channelId\": {{channelId}},\n    \"channelTitle\": \"Пейзаж ТВ\",\n    \"rating\": [\n        {\n            \"rate\": 10,\n            \"userCount\": {\n                \"value\": 4,\n                \"unit\": \"шт.\"\n            }\n        },\n        {\n            \"rate\": 9,\n            \"userCount\": {\n                \"value\": 18,\n                \"unit\": \"шт.\"\n            }\n        },\n        {\n            \"rate\": 8,\n            \"userCount\": {\n                \"value\": 29,\n                \"unit\": \"шт.\"\n            }\n        },\n        {\n            \"rate\": 7,\n            \"userCount\": {\n                \"value\": 56,\n                \"unit\": \"шт.\"\n            }\n        },\n        {\n            \"rate\": 6,\n            \"userCount\": {\n                \"value\": 14,\n                \"unit\": \"шт.\"\n            }\n        },\n        {\n            \"rate\": 5,\n            \"userCount\": {\n                \"value\": 19,\n                \"unit\": \"шт.\"\n            }\n        },\n        {\n            \"rate\": 4,\n            \"userCount\": {\n                \"value\": 3,\n                \"unit\": \"шт.\"\n            }\n        },\n        {\n            \"rate\": 3,\n            \"userCount\": {\n                \"value\": 8,\n                \"unit\": \"шт.\"\n            }\n        },\n        {\n            \"rate\": 2,\n            \"userCount\": {\n                \"value\": 0,\n                \"unit\": \"шт.\"\n            }\n        },\n        {\n            \"rate\": 1,\n            \"userCount\": {\n                \"value\": 1,\n                \"unit\": \"шт.\"\n            }\n        }\n    ],\n    \"votesDetails\": {\n        \"votersCount\": {\n            \"value\": 152,\n            \"unit\": \"шт.\"\n        }\n    }\n}"
+				},
+				{
+					"name": "Оценки пользователей (error1)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{metricsServer}}/channel/{{channelId}}/stats/rating",
+							"host": [
+								"{{metricsServer}}"
+							],
+							"path": [
+								"channel",
+								"{{channelId}}",
+								"stats",
+								"rating"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "{{dateFrom}}",
+									"description": "Обязательный параметр\nДата начала периода (string)",
+									"disabled": true
+								},
+								{
+									"key": "dateTo",
+									"value": "{{dateTo}}",
+									"description": "Обязательный параметр\nДата окончания периода (string)",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 11 Feb 2023 20:22:17 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=fb65b82dadfd9289"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=d480e27498c02430"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "114"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1676146958"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"4a5-wcL8BAkbGPNToVsqmT71AsywryU\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"name\": \"Error Params\",\n        \"message\": \"Double check your request params and try again.\",\n        \"header\": \"No matching params\"\n    }\n}"
+				},
+				{
+					"name": "Оценки пользователей (error2)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{metricsServer}}/channel/{{channelId}}/stats/rating?dateFrom={{dateFrom}}",
+							"host": [
+								"{{metricsServer}}"
+							],
+							"path": [
+								"channel",
+								"{{channelId}}",
+								"stats",
+								"rating"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "{{dateFrom}}",
+									"description": "Обязательный параметр\nДата начала периода (string)"
+								},
+								{
+									"key": "dateTo",
+									"value": "{{dateTo}}",
+									"description": "Обязательный параметр\nДата окончания периода (string)",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 11 Feb 2023 20:22:17 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=fb65b82dadfd9289"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=d480e27498c02430"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "114"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1676146958"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"4a5-wcL8BAkbGPNToVsqmT71AsywryU\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"name\": \"Error Params\",\n        \"message\": \"Double check your request params and try again.\",\n        \"header\": \"No matching params\"\n    }\n}"
+				},
+				{
+					"name": "Оценки пользователей (error3)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{metricsServer}}/channel/{{channelId}}/stats/rating?dateTo={{dateTo}}",
+							"host": [
+								"{{metricsServer}}"
+							],
+							"path": [
+								"channel",
+								"{{channelId}}",
+								"stats",
+								"rating"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "{{dateFrom}}",
+									"description": "Обязательный параметр\nДата начала периода (string)",
+									"disabled": true
+								},
+								{
+									"key": "dateTo",
+									"value": "{{dateTo}}",
+									"description": "Обязательный параметр\nДата окончания периода (string)"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 11 Feb 2023 20:22:17 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=fb65b82dadfd9289"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=d480e27498c02430"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "114"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1676146958"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"4a5-wcL8BAkbGPNToVsqmT71AsywryU\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"name\": \"Error Params\",\n        \"message\": \"Double check your request params and try again.\",\n        \"header\": \"No matching params\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Статистика добавления канала в Избранное",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Test for active status only\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"active\");",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{metricsServer}}/channel/{{channelId}}/stats/favourites?dateFrom={{dateFrom}}&dateTo={{dateTo}}&status=active",
+					"host": [
+						"{{metricsServer}}"
+					],
+					"path": [
+						"channel",
+						"{{channelId}}",
+						"stats",
+						"favourites"
+					],
+					"query": [
+						{
+							"key": "dateFrom",
+							"value": "{{dateFrom}}"
+						},
+						{
+							"key": "dateTo",
+							"value": "{{dateTo}}"
+						},
+						{
+							"key": "status",
+							"value": "active",
+							"description": "Опциональный параметр\n(enam)\nactive -- выводит количество пользователей, у которых на конец периода канал все ещё находится в списке избранных\n"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Кол-во пользователей, добавивших канал в Избранное",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"name": "Content-Type",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{metricsServer}}/channel/{{channelId}}/stats/favourites?dateFrom={{dateFrom}}&dateTo={{dateTo}}",
+							"host": [
+								"{{metricsServer}}"
+							],
+							"path": [
+								"channel",
+								"{{channelId}}",
+								"stats",
+								"favourites"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "{{dateFrom}}"
+								},
+								{
+									"key": "dateTo",
+									"value": "{{dateTo}}"
+								},
+								{
+									"key": "status",
+									"value": null,
+									"description": "Опциональный параметр\n(enam)\nactive -- выводит количество пользователей, у которых на конец периода канал все ещё находится в списке избранных\n",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"dateFrom\": {{dateFrom}},\n    \"dateTo\": {{dateTo}},\n    \"channelId\": {{channelId}},\n    \"channelTitle\": \"Пейзаж ТВ\",\n    \"userFavourites\": [\n        {\n            \"status\": null,\n            \"viewersCount\": {\n                \"value\": \"116\",\n                \"unit\": \"шт.\"\n            }\n        }\n    ]\n}"
+				},
+				{
+					"name": "Кол-во пользователей, добавивших канал в Избранное Copy",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"name": "Content-Type",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{metricsServer}}/channel/{{channelId}}/stats/favourites?dateFrom={{dateFrom}}&dateTo={{dateTo}}&status=active",
+							"host": [
+								"{{metricsServer}}"
+							],
+							"path": [
+								"channel",
+								"{{channelId}}",
+								"stats",
+								"favourites"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "{{dateFrom}}"
+								},
+								{
+									"key": "dateTo",
+									"value": "{{dateTo}}"
+								},
+								{
+									"key": "status",
+									"value": "active",
+									"description": "Опциональный параметр\n(enam)\nactive -- выводит количество пользователей, у которых на конец периода канал все ещё находится в списке избранных\n"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"dateFrom\": \"{{dateFrom}}\",\n    \"dateTo\": \"{{dateTo}}\",\n    \"channelId\": {{channelId}},\n    \"channelTitle\": \"Пейзаж ТВ\",\n    \"userFavourites\": [\n        {\n            \"status\": \"active\",\n            \"viewersCount\": {\n                \"value\": 112,\n                \"unit\": \"шт.\"\n            }\n        }\n    ]\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.test(\"Status code is 200\", function () {",
+					"    pm.response.to.have.status(200);",
+					"});",
+					"pm.test(\"response must be valid and have a body\", function () {",
+					"     pm.response.to.be.ok;",
+					"     pm.response.to.be.withBody;",
+					"     pm.response.to.be.json;",
+					"});",
+					"",
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "metricsServer",
+			"value": "https://737d1334-2cd4-4565-9d83-4c6959bf9c81.mock.pstmn.io"
+		},
+		{
+			"key": "channelId",
+			"value": "14100"
+		},
+		{
+			"key": "dateFrom",
+			"value": "2023-01-20T00:00:00",
+			"type": "string"
+		},
+		{
+			"key": "dateTo",
+			"value": "2023-02-20T23:59:59",
+			"type": "string"
+		},
+		{
+			"key": "userId",
+			"value": "ba15512b-30e8-43c5-85ee-717486053da8",
+			"type": "string"
+		}
+	]
+}
