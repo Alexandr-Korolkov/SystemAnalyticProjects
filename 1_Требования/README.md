@@ -1,8 +1,3 @@
-# Разработка требований 
-
-## Название проекта  
-**Разработка требований к функции карточек для запоминания слов в приложении Chatty 2.0**  
-
 ## Цель проекта  
 Анализ потребностей пользователей и стейкхолдеров для проектирования функции карточек (flashcards) в языковом приложении Chatty. На основе интервью и спецификаций требований были выделены ключевые сценарии использования и оформлены в виде UML-диаграмм и таблиц Use Case.  
 
@@ -13,9 +8,9 @@
 - Описание трёх выбранных Use Case в табличной форме по методологии Алистера Коберна  
 
 ## Результаты  
-- Готовая [Use Case-диаграмма](https://drive.google.com/file/d/1pnJ67IUetzT-a20JJDgX-PhA5_LoEfIu/view?usp=drive_link), отражающая взаимодействие пользователя с карточками  
+- [Use Case-диаграмма](https://drive.google.com/file/d/1pnJ67IUetzT-a20JJDgX-PhA5_LoEfIu/view?usp=drive_link), отражающая взаимодействие пользователя с карточками  
 - [Документ с детализированными Use Case](https://docs.google.com/document/d/13wCGddR0ndzaHNUDABFK75FQt9vbincW/edit?usp=drive_link&ouid=106939733334678318126&rtpof=true&sd=true) в табличном формате  
-- [Дополненнаый документ спецификации](https://docs.google.com/document/d/1l3CTWMC3FtXPtjuRSD4HZvOPCraShzXH/edit?usp=drive_link&ouid=106939733334678318126&rtpof=true&sd=true) с требованиями по заданию 
+- [Дополненный документ спецификации](https://docs.google.com/document/d/1l3CTWMC3FtXPtjuRSD4HZvOPCraShzXH/edit?usp=drive_link&ouid=106939733334678318126&rtpof=true&sd=true) с требованиями по заданию 
 
 ## Инструменты  
 - diagrams.net (для UML)  
