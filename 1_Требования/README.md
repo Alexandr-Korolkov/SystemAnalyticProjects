@@ -13,9 +13,9 @@
 - Описание трёх выбранных Use Case в табличной форме по методологии Алистера Коберна  
 
 ## Результаты  
-- Готовая [Use Case-диаграмма](https://drive.google.com/file/d/1pnJ67IUetzT-a20JJDgX-PhA5_LoEfIu/view?usp=sharing), отражающая взаимодействие пользователя с карточками  
-- Документ с детализированными Use Case в табличном формате  
-- Чёткие требования для дальнейшей разработки функции  
+- Готовая [Use Case-диаграмма](https://drive.google.com/file/d/1pnJ67IUetzT-a20JJDgX-PhA5_LoEfIu/view?usp=drive_link), отражающая взаимодействие пользователя с карточками  
+- [Документ с детализированными Use Case](https://docs.google.com/document/d/13wCGddR0ndzaHNUDABFK75FQt9vbincW/edit?usp=drive_link&ouid=106939733334678318126&rtpof=true&sd=true) в табличном формате  
+- [Дополненнаый документ спецификации](https://docs.google.com/document/d/1l3CTWMC3FtXPtjuRSD4HZvOPCraShzXH/edit?usp=drive_link&ouid=106939733334678318126&rtpof=true&sd=true) с требованиями по заданию 
 
 ## Инструменты  
 - diagrams.net (для UML)  
