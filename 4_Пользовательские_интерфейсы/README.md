@@ -12,7 +12,7 @@
    - Изучение DFD-диаграммы потоков данных ![DFD-диаграмма](https://github.com/Alexandr-Korolkov/SystemAnalyticProjects/blob/main/4_Пользовательские_интерфейсы/Диаграмма%20потоков%20данных.png)
    - Анализ диаграммы структуры интерфейса ![Диаграмма структуры интерфейса](https://github.com/Alexandr-Korolkov/SystemAnalyticProjects/blob/main/4_Пользовательские_интерфейсы/Диаграмма%20структуры%20интерфейса.png)
 
-**Проектирование интерфейса** [Макет в Figma](https://drive.google.com/file/d/1P9of92BTa2GNRRzYTM0f3ArPR4mF5o7N/view?usp=drive_link) ([Макет в PDF](https://github.com/Alexandr-Korolkov/SystemAnalyticProjects/blob/main/4_Пользовательские_интерфейсы/Корольков_Интерфейс%20(1).pdf)):
+**Проектирование интерфейса** [Макет в Figma](https://www.figma.com/design/UozZ6JVE91hVoWVjeDHMnv/%D0%9A%D0%BE%D1%80%D0%BE%D0%BB%D1%8C%D0%BA%D0%BE%D0%B2_%D0%98%D0%BD%D1%82%D0%B5%D1%80%D1%84%D0%B5%D0%B9%D1%81?node-id=0-1&t=lhhoDTAslm8oE0K8-1) ([Макет в PDF](https://github.com/Alexandr-Korolkov/SystemAnalyticProjects/blob/main/4_Пользовательские_интерфейсы/Корольков_Интерфейс%20(1).pdf)):
    - Создание недостающих вайрфреймов
    - Доработка существующих экранов
    - Формирование полной раскадровки
