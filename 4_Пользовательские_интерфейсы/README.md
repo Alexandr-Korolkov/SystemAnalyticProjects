@@ -9,14 +9,14 @@
 
 ## Результаты:
 **Анализ требований**:
-   - Изучение DFD-диаграммы потоков данных ![DFD-диаграмма]()
-   - Анализ диаграммы структуры интерфейса ![Диаграмма структуры интерфейса]()
+   - Изучение DFD-диаграммы потоков данных ![DFD-диаграмма](https://github.com/Alexandr-Korolkov/SystemAnalyticProjects/blob/main/4_Пользовательские_интерфейсы/Диаграмма%20потоков%20данных.png)
+   - Анализ диаграммы структуры интерфейса ![Диаграмма структуры интерфейса](https://github.com/Alexandr-Korolkov/SystemAnalyticProjects/blob/main/4_Пользовательские_интерфейсы/Диаграмма%20структуры%20интерфейса.png)
 
-**Проектирование интерфейса** [Макет в Figma]() ([Макет в PDF]()):
+**Проектирование интерфейса** [Макет в Figma](https://drive.google.com/file/d/1P9of92BTa2GNRRzYTM0f3ArPR4mF5o7N/view?usp=drive_link) ([Макет в PDF](https://github.com/Alexandr-Korolkov/SystemAnalyticProjects/blob/main/4_Пользовательские_интерфейсы/Корольков_Интерфейс%20(1).pdf)):
    - Создание недостающих вайрфреймов
    - Доработка существующих экранов
    - Формирование полной раскадровки
-![Макет]()
+![Макет](https://github.com/Alexandr-Korolkov/SystemAnalyticProjects/blob/main/4_Пользовательские_интерфейсы/Пользовательский%20интерфейс.png)
 
 ## Технологии и инструменты
 `Figma` `Wireframing` `UX Design` `DFD`
