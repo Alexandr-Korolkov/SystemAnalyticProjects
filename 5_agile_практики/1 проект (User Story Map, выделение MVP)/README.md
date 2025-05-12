@@ -4,14 +4,14 @@
 ## Выполненные работы
 
 ### Аналитическая часть [Ссылка на Miro](https://miro.com/app/board/uXjVIN_affg=/?share_link_id=318366069131):
-- Изучение 15+ функциональных требований ![требования](https://drive.google.com/file/d/1WBCTSuL_q_yo9ABxathHZy5qCgLxJVuG/view?usp=drive_link)
+- Изучение 15+ функциональных требований ![требования](https://github.com/Alexandr-Korolkov/SystemAnalyticProjects/blob/main/5_agile_практики/1%20проект%20(User%20Story%20Map%2C%20выделение%20MVP)/Пользовательская_карта_историий%20Корольков_1.png)
 - Анализ 2 персон пользователей и гипотезы для проверки
 - Систематизация комментариев разработчиков и дизайнеров
 
 ### Проектирование [Ссылка на Miro](https://miro.com/app/board/uXjVIN_affg=/?share_link_id=318366069131):
 - Составление карты из 11 пользовательских историй
 - Выделение MVP-ядра (4 ключевых историй)
-![Miro](https://drive.google.com/file/d/1oMQNAGELeNw35ZVypeCOC2m9A0sGDkIN/view?usp=drive_link)
+![Miro](https://github.com/Alexandr-Korolkov/SystemAnalyticProjects/blob/main/5_agile_практики/1%20проект%20(User%20Story%20Map%2C%20выделение%20MVP)/Пользовательская_карта_историий%20Корольков_4.png)
 
 ## Технологии
 `User Stories Mapping` `MVP Design` 
