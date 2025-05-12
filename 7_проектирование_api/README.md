@@ -16,7 +16,7 @@
 
 ### 3. [Разработка профиля API](https://github.com/Alexandr-Korolkov/SystemAnalyticProjects/blob/main/7_проектирование_api/Разработка%20API.docx) исходя из требований, приведенных в интервью. 
 
-### 4. Собрал коллекцию в Postman под запрос телеканала.[JSON запросы](https://github.com/Alexandr-Korolkov/SystemAnalyticProjects/blob/main/7_проектирование_api/Custom%20Collection.postman_collection.json)
+### 4. Собрал коллекцию в Postman под запрос телеканала. [JSON запросы](https://github.com/Alexandr-Korolkov/SystemAnalyticProjects/blob/main/7_проектирование_api/Custom%20Collection.postman_collection.json)
 ![результат](https://github.com/Alexandr-Korolkov/SystemAnalyticProjects/blob/main/7_проектирование_api/Результат%20коллекции.png)
 
 ## Технологии
