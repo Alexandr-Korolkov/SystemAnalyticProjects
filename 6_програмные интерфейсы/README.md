@@ -25,7 +25,7 @@
    - Добавления/удаления из избранного
 2. Спроектировал API-эндпоинты для нового сервиса
 3. Предложил схему интеграции с существующими компонентами
-![последовательсность](https://drive.google.com/file/d/1A_ag_bZoo-zpbqlahaZ84NVJdwSFU3K_/view?usp=drive_link)
+![последовательсность](https://github.com/Alexandr-Korolkov/SystemAnalyticProjects/blob/main/6_програмные%20интерфейсы/Корольков_api_uml.drawio.png)
 
 ## Технологии
 `UML` `REST API` `Postman`
