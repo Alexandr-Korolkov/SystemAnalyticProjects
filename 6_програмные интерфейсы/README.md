@@ -19,7 +19,8 @@
 3. Определил необходимые изменения для поддержки ТВ-каналов
 
 ### Проектная часть
-- Разработал [диаграмму последовательности](https://drive.google.com/file/d/1A_ag_bZoo-zpbqlahaZ84NVJdwSFU3K_/view?usp=drive_link) для
+- Разработал [диаграмму последовательности](https://drive.google.com/file/d/1A_ag_bZoo-zpbqlahaZ84NVJdwSFU3K_/view?usp=drive_link) :
+
 ![последовательсность](https://github.com/Alexandr-Korolkov/SystemAnalyticProjects/blob/main/6_програмные%20интерфейсы/Корольков_api_uml.drawio.png)
 
 ## Технологии
