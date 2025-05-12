@@ -12,11 +12,10 @@
 ### Аналитическая часть
 1. Изучил UML-диаграмму компонентов существующей системы
 ![компоненты](https://github.com/Alexandr-Korolkov/SystemAnalyticProjects/blob/main/6_програмные%20интерфейсы/Диаграмма%20компонентов.png)
-2. Проанализировал [REST-запросы](https://drive.google.com/file/d/1A_ag_bZoo-zpbqlahaZ84NVJdwSFU3K_/view?usp=drive_link) сервиса "Фильмы":
+2. Проанализировал [REST-запросы](https://github.com/Alexandr-Korolkov/SystemAnalyticProjects/blob/main/6_програмные%20интерфейсы/коллекция%20запросов.png) сервиса "Фильмы":
    - Структуру запросов
    - Параметры
    - Тела ответов
-![REST-запросы](https://github.com/Alexandr-Korolkov/SystemAnalyticProjects/blob/main/6_програмные%20интерфейсы/коллекция%20запросов.png)
 3. Определил необходимые изменения для поддержки ТВ-каналов
 
 ### Проектная часть
